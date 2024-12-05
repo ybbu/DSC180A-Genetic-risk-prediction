@@ -1,41 +1,41 @@
+# Project Setup Instructions
 
-## Data Files
+### Step 1: Clone the Repository
+Clone the repository using the command below:
 
-In the `data` folder, you will find the following files:
+```sh
+git clone https://github.com/ybbu/DSC180A-Genetic-risk-prediction.git
+```
 
-1. **`gene_annot.txt.gz`**: A completed list of genes located on autosomes, including specific information for each gene.
-2. **`GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz`**: A gene expression file containing data from samples in the [1000 Genomes Project](https://www.internationalgenome.org/).
+### Step 2: Install PLINK2
+Before starting the analysis, make sure you have PLINK2 installed and executable.
 
-You will need to unzip both of these files before conducting the analysis.
+- Download PLINK2 from [here](https://www.cog-genomics.org/plink/2.0/) (choose the version that fits your OS).
+- Unzip the downloaded package.
+- Move the pacakge into the cloned repository directory.
 
-## Required Resources
+### Step 3: Set Up the Python Environment
+All the Python packages are listed in the `environment.yml` file. Once you have PLINK2 installed, follow these steps to set up the environment:
 
-Before starting the analysis, ensure you have the following resources:
+1. Create the conda environment:
 
-1. **1000 Genomes Consortium Data**:
-   - Download the publicly available data from [here](https://data.broadinstitute.org/alkesgroup/FUSION/LDREF.tar.bz2).
-   - Keep the folder named `LDREF` in the repository directory.
+   ```sh
+   conda env create -f environment.yml
+   ```
 
-2. **Software Requirements**:
-   - **PLINK2**: Download from [here](https://www.cog-genomics.org/plink/2.0/) and place it in the repository directory.
-   - **Python Packages**: Ensure you have the following Python packages installed:
-     - `os`
-     - `math`
-     - `random`
-     - `subprocess`
-     - `numpy`
-     - `pandas`
-     - `pandas_plink`
-     - `statsmodels`
-     - `matplotlib`
+2. Activate the environment:
 
-## Getting Started
+   ```sh
+   conda activate dsc180a
+   ```
 
-To begin your analysis, follow these steps:
+3. Install the IPython kernel for Jupyter Notebook:
 
-1. Unzip the `gene_annot.txt.gz` and `GD462.GeneQuantRPKM.50FN.samplename.resk10.txt.gz` files.
-2. Download and extract the 1000 Genomes consortium data into a folder named `LDREF`.
-3. Ensure PLINK2 is downloaded and accessible in your project directory.
-4. Install the required Python packages.
+   ```sh
+   python -m ipykernel install --user --name dsc180a --display-name "dsc180a"
+   ```
 
-Once everything is set up, open the `analysis.ipynb` notebook to start your analysis.
+### Step 4: Start Your Analysis
+Now you can open the Jupyter Notebook file `analysis.ipynb` to start your analysis!
+
+Make sure to select the **dsc180a** kernel from the Python Environments to ensure all dependencies are correctly loaded.
