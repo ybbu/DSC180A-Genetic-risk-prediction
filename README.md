@@ -1,5 +1,11 @@
 # How to Get Started
 
+‼️‼️‼️ <br>
+The original script, `analysis.ipynb`, performs eQTL analysis across all chromosomes (1–22), which can take **over 4 hours** to complete. To make it more convenient for reproducibility check, a shortened version, `analysis_fast.ipynb`, is also provided. 
+
+This shortened script performs the same set of analyses but focuses on a single chromosome (chr15), taking approximately **32 minutes** to complete.
+
+
 ### Step 1: Clone the Repository
 Clone the repository using the command below:
 
