@@ -1,4 +1,4 @@
-# Project Setup Instructions
+# How to Get Started
 
 ### Step 1: Clone the Repository
 Clone the repository using the command below:
